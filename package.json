@@ -1,0 +1,31 @@
+{
+  "name": "cordova-plugin-nuance",
+  "version": "1.0.0",
+  "description": "Cordova Nuance Ndev Plugin",
+  "cordova": {
+    "id": "cordova-plugin-nuance",
+    "platforms": [
+      "ios",
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcelgoya/cordova-plugin-nuance.git"
+  },
+  "keywords": [
+    "cordova",
+    "nuance",
+    "asr",
+    "tts",
+    "ecosystem:cordova",
+    "cordova-ios",
+    "cordova-android"
+  ],
+  "author": "Marcel Goya",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/marcelgoya/cordova-plugin-nuance/issues"
+  },
+  "homepage": "https://github.com/marcelgoya/cordova-plugin-nuance#readme"
+}
