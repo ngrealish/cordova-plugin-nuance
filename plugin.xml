@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" id="cordova-plugin-nuance" version="1.0.0">
+  <name>Nuance SpeechKit</name>
+  <description>Cordova Nuance Ndev Plugin</description>
+  <license>MIT</license>
+  <keywords>cordova,nuance,asr,tts</keywords>
+
+  <js-module src="www/nuancespeechkit.js" name="NuancePlugin">
+    <clobbers target="NuancePlugin"/>
+  </js-module>
+
+  <platform name="ios">
+    <config-file target="config.xml" parent="/*">
+      <feature name="NuancePlugin">
+        <param name="ios-package" value="NuancePlugin"/>
+        <param name="onload" value="true"/>
+      </feature>
+    </config-file>
+
+    <framework src="lib/SpeechKit.framework" custom="true"/>
+
+    <header-file src="src/ios/NuancePlugin.h"/>
+    <source-file src="src/ios/NuancePlugin.m" compiler-flags="-fno-objc-arc"/>
+    <header-file src="src/ios/ICredentials.h"/>
+    <header-file src="src/ios/Credentials.h"/>
+    <source-file src="src/ios/Credentials.m"/>
+
+    <framework src="AssetsLibrary.framework"/>
+    <framework src="Security.framework"/>
+    <framework src="Foundation.framework"/>
+    <framework src="CoreMedia.framework"/>
+    <framework src="MediaPlayer.framework"/>
+    <framework src="SystemConfiguration.framework"/>
+    <framework src="CFNetwork.framework"/>
+    <framework src="AVFoundation.framework"/>
+    <framework src="AudioToolbox.framework"/>
+    <framework src="CoreGraphics.framework"/>
+  </platform>
+
+  <platform name="android">
+    <framework src="com.nuance:speechkit:2.1+@aar" />
+
+    <config-file target="res/xml/config.xml" parent="/*">
+      <feature name="NuancePlugin">
+        <param name="android-package" value="com.lingusocial.nuance.NuancePlugin"/>
+      </feature>
+    </config-file>
+
+    <config-file target="AndroidManifest.xml" parent="/*">
+      <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+      <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+      <uses-permission android:name="android.permission.INTERNET"/>
+    </config-file>
+
+    <source-file src="src/android/Credentials.java" target-dir="src/com/lingusocial/nuance"/>
+    <source-file src="src/android/NuancePlugin.java" target-dir="src/com/lingusocial/nuance"/>
+  </platform>
+</plugin>
