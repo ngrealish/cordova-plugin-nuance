@@ -9,11 +9,12 @@ This is an implementation of Nuance SpeechKit (v2.1+) SDK in Cordova (6.2+).
 
 iOS
 
-- Configure the plugin with your credentials in the Plugins/Credentials.m file
+- Configure the plugin with your credentials in: platforms/ios/{{AppName}}/Plugins/cordova-plugin-nuance/Credentials.m
 
 Android
 
-- Configure the plugin with your credentials in the Plugins/Credentials.m file
+- Configure the plugin with your credentials in: platforms/android/src/com/lingusocial/nuance/Credentials.java
+
 
 ###Usage
 
